@@ -1,3 +1,5 @@
+This project is to teach myself NextJS. I am building the solo project from Turing Mod 1 found [here](https://github.com/turingschool-examples/self-care-center).
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
