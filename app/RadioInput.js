@@ -1,4 +1,5 @@
-export default function RadioInput({ handleRadio, getMessage }) {
+export default function RadioInput({ handleRadio, getMessage, quoteType }) {
+  console.log('HELLO', quoteType, !quoteType);
   return (
     <div className='bg-white py-4 px-5 w-1/2 rounded-lg flex flex-col'>
       <div className='flex justify-around'>
@@ -31,8 +32,11 @@ export default function RadioInput({ handleRadio, getMessage }) {
       </div>
       <div className='flex justify-center'>
         <button
-          className='bg-dark-blue rounded-md px-5 mt-4 w-48'
+          className={`bg-dark-blue rounded-md px-5 mt-4 w-48 ${
+            !quoteType ? 'opacity-75' : ''
+          }`}
           onClick={getMessage}
+          disabled={!quoteType}
         >
           Receive Message
         </button>
