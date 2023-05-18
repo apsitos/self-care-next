@@ -1,5 +1,4 @@
 export default function RadioInput({ handleRadio, getMessage, quoteType }) {
-  console.log('HELLO', quoteType, !quoteType);
   return (
     <div className='bg-white py-4 px-5 w-1/2 rounded-lg flex flex-col'>
       <div className='flex justify-around'>
@@ -9,6 +8,7 @@ export default function RadioInput({ handleRadio, getMessage, quoteType }) {
             id='affirmation'
             name='quote-type'
             value='affirmation'
+            checked={quoteType === 'affirmation'}
             className='mr-2.5'
             onClick={handleRadio}
           />
@@ -22,6 +22,7 @@ export default function RadioInput({ handleRadio, getMessage, quoteType }) {
             id='mantra'
             name='quote-type'
             value='mantra'
+            checked={quoteType === 'mantra'}
             className='mr-2.5'
             onClick={handleRadio}
           />

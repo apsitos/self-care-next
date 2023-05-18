@@ -15,7 +15,12 @@ export default function Home() {
   const handleRadio = (e) => {
     setQuoteType(e.target.id);
   };
-  console.log(quoteType);
+
+  const handleClear = () => {
+    setQuoteType(null);
+    setSaying(null);
+  };
+
   const getMessage = () => {
     const selection = Math.floor(Math.random() * (15 - 1) + 1);
     return setSaying(
@@ -33,7 +38,7 @@ export default function Home() {
         getMessage={getMessage}
         quoteType={quoteType}
       />
-      <QuoteDisplay saying={saying} />
+      <QuoteDisplay saying={saying} handleClear={handleClear} />
     </main>
   );
 }
